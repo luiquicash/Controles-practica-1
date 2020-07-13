@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Controles_practica_1.MainPage">
+
+    <StackLayout Padding="20">
+        <Label Margin="0,0,0,20" Text="Controles Practica 1" FontSize="Large" TextColor="Blue" FontAttributes="Bold"/>
+      
+            <Label Text="Ingrese su Nombre :" FontSize="Medium"/>
+        <Entry x:Name="txtNom" Placeholder="Ingrese su Nombre"/>
+        
+            <Label Text="Ingrese su Apellido :" FontSize="Medium"/>
+        <Entry x:Name="txtApe" Placeholder="Ingrese su Apellido"/>
+        
+            <Label Text="Lugar de Nacimiento :" FontSize="Medium"/>
+        <Entry x:Name="txtLugNac" Placeholder="Ingrese su Lugar de Nacimiento"/>
+        
+        <Label Text="Estado Civil" FontSize="Medium"/>
+        <Label Text="Soltero" FontSize="Small"/>
+        <CheckBox x:Name="Soltero"/>
+        <Label Text="Casado" FontSize="Small"/>
+        <CheckBox x:Name="Casado" />
+        
+        <Label Text="Fecha de Nacimiento" FontSize="Medium"/>
+        <DatePicker x:Name="FechaNac"  Format="D" Margin="0,0,0,20"/>
+        
+        <Label Text="Profesion" FontSize="Medium"/>
+        <Picker x:Name="Profesiones"
+            Title="Seleccione la Profesion">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Contabilidad</x:String>
+                    <x:String>Educacion</x:String>
+                    <x:String>Leyes</x:String>
+                    <x:String>Software</x:String>
+                    <x:String>Otros</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button Margin="0,20,0,0" BackgroundColor="#6AF36A" CornerRadius="20" Text="Procesar" x:Name="btnProcesar" Clicked="btnProcesar_Clicked" />
+
+       
+    </StackLayout>
+
+</ContentPage>
